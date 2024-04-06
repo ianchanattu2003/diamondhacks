@@ -2875,7 +2875,6 @@ Date Occurred 2/12/2024
 Time Occurred 11:28 PM
 Summary: Unknown subject seen in office space, left when they saw custodian
 Disposition: Unable to Locate
-FEBRUARY 04, 2024
 Noise Disturbance
 Costa Verde Boulevard
 Date Reported 2/4/2024
@@ -2924,7 +2923,6 @@ Date Occurred 2/4/2024
 Time Occurred 12:45 AM
 Summary: Loud yelling and laughing
 Disposition: Referred to Student Conduct
-FEBRUARY 04, 2024
 Noise Disturbance
 Parking Lot P353
 Date Reported 2/4/2024
@@ -2973,7 +2971,6 @@ Date Occurred 2/4/2024
 Time Occurred 6:00 am‐6:15 am
 Summary: Unknown suspect stole victim unsecured property from trolley platform; loss $102.00
 Disposition: Report Taken
-FEBRUARY 04, 2024
 Suspicious Person
 Geisel Library
 Date Reported 2/4/2024
@@ -3022,7 +3019,6 @@ Date Occurred 2/4/2024
 Time Occurred 3:47 PM
 Summary:
 Disposition: Logged Event
-FEBRUARY 04, 2024
 Security Alarm
 Leichtag Family Foundation Biomedical Research
 Date Reported 2/4/2024
@@ -3071,7 +3067,6 @@ Date Occurred 2/4/2024
 Time Occurred 7:20 PM
 Summary:
 Disposition: Checks OK
-FEBRUARY 04, 2024
 Non Injury Collision
 8800 Biological Grade
 Date Reported 2/4/2024
@@ -4942,7 +4937,6 @@ Incident/Case# 2024‐0340
 Date Occurred Unknown
 Time Occurred Unknown
 Summary: Third party report regarding a faculty physician who had grabbed the behind of a staff member,
-1 or 2 years ago
 Disposition Information Only
 Vandalism
 Discovery Way
@@ -5265,7 +5259,6 @@ Date Occurred 3/30/2024
 Time Occurred 10:30 PM
 Summary: Water coming from wall unknown origin
 Disposition: Referred to Other Department - UCSD
-FEBRUARY 08, 2024
 Unknown Injury Collision
 Interstate 5/ Genesee Avenue
 Date Reported 2/8/2024
@@ -5314,7 +5307,6 @@ Date Occurred 2/8/2024
 Time Occurred 1:42 PM
 Summary: Patient Transport
 Disposition: Referred to Other Agency ‐ San Diego Fire Department
-FEBRUARY 08, 2024
 Incomplete/Accidental Wireless 911 Call
 Regents Road
 Date Reported 2/8/2024
@@ -5364,7 +5356,6 @@ Date Occurred 2/8/2024
 Time Occurred 5:50 PM
 Summary:
 Disposition: Logged Event
-FEBRUARY 08, 2024
 Gas/Water/Sewer Leak
 York Hall
 Date Reported 2/8/2024
@@ -5413,7 +5404,6 @@ Date Occurred 2/8/2024
 Time Occurred 9:00 AM ‐ 7:30 PM
 Summary: Secured bicycle stolen, loss $600.00
 Disposition: Report Taken
-FEBRUARY 08, 2024
 Security Alarm
 Women's Center
 Date Reported 2/8/2024
@@ -5462,7 +5452,6 @@ Date Occurred 2/8/2024
 Time Occurred 10:35 PM
 Summary: Control panel inside Res Life Supply Room, making clicking noise since yesterday
 Disposition: Referred to Other UCSD Department ‐ Housing Maintenance
-FEBRUARY 08, 2024
 Fire Alarm
 Rita Atkinson Residences
 Date Reported 2/8/2024
@@ -7361,7 +7350,6 @@ Date Occurred 9:00 AM
 Time Occurred 3/26/2024
 Summary: Unknown person smoking vape inside restroom triggered fire alarm
 Disposition: Hospital Incident Report Taken
-MARCH 03, 2024
 Suspicious Person
 Price Center East ‐ Commuter Lounge
 Date Reported 3/3/2024
@@ -7410,7 +7398,6 @@ Date Occurred 3/3/2024
 Time Occurred 2:33 AM
 Summary: Group males outside fighting, left area in unknown direction
 Disposition: Quiet on Arrival
-MARCH 03, 2024
 Suspicious Circumstances
 Europe Hall
 Date Reported 3/3/2024
@@ -7452,7 +7439,6 @@ Date Occurred 3/3/2024
 Time Occurred 12:06 PM
 Summary:
 Disposition: Logged Event
-MARCH 03, 2024
 Incomplete/Accidental Landline 911 Call
 Mosaic
 Date Reported 3/3/2024
@@ -7493,7 +7479,6 @@ Date Occurred 3/3/2024
 Time Occurred 3:39 PM
 Summary:
 Disposition: Referred to Other Agency ‐ San Diego Police Department
-MARCH 03, 2024
 Non Injury Collision
 Gilman Crosswalk/ Wong Library
 Date Reported 3/3/2024
@@ -7542,7 +7527,6 @@ Date Occurred 3/3/2024
 Time Occurred 6:41 PM
 Summary: Via 911, caller reporting kids using drugs at house in El Cajon, California
 Disposition: Referred to Other Agency ‐ El Cajon Police Department
-MARCH 03, 2024
 Incomplete/Accidental Wireless 911 Call
 North Torrey Pines Road
 Date Reported 3/3/2024
@@ -10645,7 +10629,6 @@ Date Occurred 3/31/2024
 Time Occurred 11:29 AM
 Summary: Patient made verbal threats towards hospital staff
 Disposition: Hospital Security Report Taken
-MARCH 9, 2024
 Suspicious Person
 Thurgood Marshall Res Hall V
 Date Reported 3/9/2024
@@ -10694,7 +10677,6 @@ Date Occurred 3/9/2024
 Time Occurred 5:28 AM
 Summary:
 Disposition Checks OK
-MARCH 9, 2024
 Security Alarm
 Otterson Hall
 Date Reported 3/9/2024
@@ -10743,7 +10725,6 @@ Date Occurred 3/8/2024 ‐ 3/9/2024
 Time Occurred 11:27 AM
 Summary: Secured electric scooter stolen, loss $370.00
 Disposition: Report Taken
-MARCH 9, 2024
 Welfare Check
 Villa La Jolla Drive
 Date Reported 3/9/2024
@@ -10792,7 +10773,6 @@ Date Occurred 3/9/2024
 Time Occurred 5:34 PM
 Summary: Older adult male wandering around, pushing a trash can and making non‐sensical statements
 Disposition: Service Provided
-MARCH 9, 2024
 Person Down
 Carlsbad Blvd
 Date Reported 3/9/2024
@@ -10841,7 +10821,6 @@ Date Occurred 3/9/2024
 Time Occurred 10:07 PM
 Summary:
 Disposition: False Alarm
-MARCH 9, 2024
 Suspicious Person
 Roger's Place & Market
 Date Reported 3/9/2024
@@ -14101,7 +14080,6 @@ Date Occurred 3/3/2024
 Time Occurred 6:15 PM
 Summary: Patient spit on nurse
 Disposition: Information Only
-FEBRUARY 07, 2024
 Fire Alarm
 Scholars Drive‐ South
 Date Reported 2/7/2024
@@ -14150,7 +14128,6 @@ Date Occurred 2/7/2024
 Time Occurred 5:31 AM
 Summary: Landscape reporting damage to vehicle and trash around car
 Disposition Field Interview
-FEBRUARY 07, 2024
 Medical Aid
 Genesee Avenue
 Date Reported 2/7/2024
@@ -14199,7 +14176,6 @@ Date Occurred 2/7/2024
 Time Occurred 12:39 PM
 Summary: Unknown male carrying a plastic bag was trying to light a vape & papers in lobby
 Disposition: Information Only
-FEBRUARY 07, 2024
 Welfare Check
 La Jolla Village Drive
 Date Reported 2/7/2024
@@ -14240,7 +14216,6 @@ Date Occurred 2/7/2024
 Time Occurred 1:56 PM
 Summary: Electric scooter battery ignited by unknown cause, minor damage to flooring, no injuries
 Disposition: Report Taken
-FEBRUARY 07, 2024
 Property Damage
 North Point Lane
 Date Reported 2/7/2024
@@ -14282,7 +14257,6 @@ Date Occurred 2/7/2024
 Time Occurred 6:33 PM
 Summary:
 Disposition: Logged Event
-FEBRUARY 07, 2024
 Incomplete/Accidental Landline 911 Call
 Scholars Drive ‐ North
 Date Reported 2/7/2024
@@ -14331,7 +14305,6 @@ Date Occurred 2/7/2024
 Time Occurred 8:14 PM
 Summary:
 Disposition: False Alarm
-FEBRUARY 07, 2024
 Property Damage
 Parking Lot P418
 Date Reported 2/7/2024
@@ -14372,7 +14345,6 @@ Date Occurred 2/7/2024
 Time Occurred 10:46 PM
 Summary:
 Disposition: False Alarm
-FEBRUARY 07, 2024
 Suspicious Circumstance
 Pharmacy Lane
 Date Reported 2/7/2024
