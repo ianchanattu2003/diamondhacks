@@ -8,7 +8,8 @@ const font = DM_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Pedal Pirates',
-  description: 'who is stealing YOUR bike??'
+  description: 'who is stealing YOUR bike??',
+  icons: '/favicon.png'
 }
 
 export default function RootLayout ({
