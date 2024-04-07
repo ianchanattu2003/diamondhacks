@@ -2,6 +2,7 @@
 
 import { Location, MAX_ZOOM, Point, latLongToPoint } from '@/lib/map-utils'
 import { PropsWithChildren, useEffect, useMemo, useRef, useState } from 'react'
+import { ImageWithLoadingAnimation } from './ImageWithLoadingAnimation'
 
 type Rectangle = {
   x: number
@@ -101,7 +102,7 @@ export function Map ({
         }}
       >
         {tiles.map(({ x, y }) => (
-          <img
+          <ImageWithLoadingAnimation
             key={`${x}/${y}`}
             className='tile'
             src={`${HOST}/${zoom}/${x + range.x}/${y + range.y}`}
