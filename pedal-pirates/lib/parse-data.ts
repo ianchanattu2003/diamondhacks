@@ -1,6 +1,7 @@
 import { Location, classroomsPixelToLatLong } from './map-utils'
 
 export type Report = {
+  source: string
   /** Description of object that was stolen. "What was stolen?" */
   object: string
   location: Location
@@ -26,6 +27,7 @@ export function parseData (tsv: string): Report[] {
     }
     console.log(x, y, classroomsPixelToLatLong(+x, +y))
     reports.push({
+      source: type,
       object,
       location: classroomsPixelToLatLong(+x, +y),
       locationName,

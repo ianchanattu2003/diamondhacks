@@ -1,7 +1,14 @@
 'use client'
 
-import { Location, MAX_ZOOM, Point, latLongToPoint } from '@/lib/map-utils'
 import {
+  Location,
+  MAX_ZOOM,
+  Point,
+  latLongToPoint,
+  pointToLatLong
+} from '@/lib/map-utils'
+import {
+  Fragment,
   PropsWithChildren,
   ReactNode,
   useEffect,
@@ -13,6 +20,7 @@ import { ImageWithLoadingAnimation } from './ImageWithLoadingAnimation'
 import { Report } from '@/lib/parse-data'
 import { Marker } from './Marker'
 import { Card } from './Card'
+import Link from 'next/link'
 
 type Rectangle = {
   x: number
@@ -29,6 +37,8 @@ type CardState = {
 const HOST = 'https://assets.concept3d.com/assets/1005/1005_Map_11'
 const LABEL_HOST =
   'https://assets.concept3d.com/assets/1005/1005_BuildingLabels_Mar2024'
+const FORM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSdnHYqS0rNO4tcJp24I1q1R5n3LWx4SJkDsorSP_3vpShg9HA/viewform'
 
 /** Visual size of each tile, in pixels. */
 const TILE_SIZE = 256
@@ -124,6 +134,16 @@ export function Map ({ corner1, corner2, zoom, reports }: MapProps) {
   }, [reports])
 
   const [card, setCard] = useState<CardState | null>(null)
+  const formUrl = useMemo(() => {
+    if (!card) {
+      return FORM_URL
+    }
+    const { latitude, longitude } = pointToLatLong({
+      x: (card.position.x / TILE_SIZE + range.x) * tileSize,
+      y: -(card.position.y / TILE_SIZE - range.y - range.height) * tileSize
+    })
+    return `${FORM_URL}?usp=pp_url&entry.1144432042=${latitude}&entry.1319011537=${longitude}`
+  }, [card])
 
   return (
     <div
@@ -187,14 +207,64 @@ export function Map ({ corner1, corner2, zoom, reports }: MapProps) {
           onClick={() => {
             setCard({ reports, position })
           }}
+          onTop={
+            position.x === card?.position.x && position.y === card?.position.y
+          }
         />
       ))}
       {card && (
         <div
           className='card-anchor'
           style={{ left: `${card.position.x}px`, top: `${card.position.y}px` }}
+          onClick={e => {
+            e.stopPropagation()
+          }}
         >
-          <Card property1='variant-2' className={''} />
+          <Card href={card.reports.length === 0 ? formUrl : undefined}>
+            {card.reports.length === 0 && (
+              <div className='report report-1 has-emoji no-report-icon'>❌</div>
+            )}
+            {card.reports.map(
+              (
+                { source, object, details, lastSeen, location, locationName },
+                i
+              ) => (
+                <Fragment key={i}>
+                  <p>
+                    <strong>Vehicle:</strong> {object}
+                  </p>
+                  <p>
+                    <strong>Location:</strong> {locationName} (
+                    <Link
+                      className='maps-link'
+                      href={`https://www.google.com/maps/place/${location.latitude},${location.longitude}`}
+                    >
+                      {location.latitude.toFixed(5)},{' '}
+                      {location.longitude.toFixed(5)}
+                    </Link>
+                    )
+                  </p>
+                  <p>
+                    <strong>Date occurred:</strong> {lastSeen.date}
+                  </p>
+                  <p>
+                    <strong>Time occurred:</strong> {lastSeen.time}
+                  </p>
+                  <p>
+                    <strong>Details:</strong> {details}
+                  </p>
+                  <p>
+                    <strong>Source:</strong> {source}
+                  </p>
+                  <hr />
+                </Fragment>
+              )
+            )}
+            <Link href={formUrl} className='add-to-map'>
+              Was your ride jacked here?{' '}
+              <strong className='bolded-link'>Mark it on the map.</strong>
+            </Link>
+          </Card>
         </div>
       )}
     </div>

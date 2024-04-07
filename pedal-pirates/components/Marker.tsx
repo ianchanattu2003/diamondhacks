@@ -16,8 +16,9 @@ export type MarkerProps = {
   reports: Report[]
   style?: CSSProperties
   onClick?: () => void
+  onTop?: boolean
 }
-export function Marker ({ reports, style, onClick }: MarkerProps) {
+export function Marker ({ reports, style, onClick, onTop }: MarkerProps) {
   const hasEmoji =
     reports.length === 1 && displayObject(reports[0].object) !== null
 
@@ -25,7 +26,7 @@ export function Marker ({ reports, style, onClick }: MarkerProps) {
     <button
       className={`report report-${reports.length} ${
         hasEmoji ? 'has-emoji' : ''
-      }`}
+      } ${onTop ? 'on-top' : ''}`}
       style={style}
       onClick={e => {
         onClick?.()

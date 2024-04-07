@@ -27,6 +27,15 @@ export function latLongToPoint ({ latitude, longitude }: Location): Point {
   }
 }
 
+export function pointToLatLong ({ x, y }: Point): Location {
+  return {
+    longitude: (x / SCALE - 1) * 180,
+    latitude:
+      ((Math.atan(Math.exp((y / SCALE - 1) * Math.PI)) - Math.PI / 4) * 360) /
+      Math.PI
+  }
+}
+
 /**
  * Converts a pixel location in the [classrooms map image][map] to a latitude
  * and longitude position.
