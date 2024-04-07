@@ -21,15 +21,16 @@ export function Marker ({ reports, style }: MarkerProps) {
     reports.length === 1 && displayObject(reports[0].object) !== null
 
   return (
-    <button
+    <div
       className={`report report-${reports.length} ${
         hasEmoji ? 'has-emoji' : ''
       }`}
       style={style}
+      data-reports={JSON.stringify(reports)}
     >
       {reports.length === 1
         ? displayObject(reports[0].object) ?? '1'
         : reports.length}
-    </button>
+    </div>
   )
 }

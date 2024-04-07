@@ -120,6 +120,15 @@ export function Map ({ corner1, corner2, zoom, reports }: MapProps) {
   return (
     <div
       className='map'
+      onClick={e => {
+        const hasReports =
+          e.target instanceof Element && e.target.closest('[data-reports]')
+        const reports: Report[] =
+          hasReports instanceof HTMLElement && hasReports.dataset.reports
+            ? JSON.parse(hasReports.dataset.reports)
+            : []
+        console.log(reports)
+      }}
       onScroll={e => {
         const div = e.currentTarget
         setViewport(viewport => ({
