@@ -79,7 +79,7 @@ body {
   background-color: rgba(255, 255, 255, 1);
   border-radius: 0px 30px 30px 0px;
   height: 832px;
-  position: relative;
+  position: static;
   width: 750px;
 }
 
@@ -172,11 +172,8 @@ body {
 }
 
 .card {
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgb(224.25, 58.65, 39.94) 0%,
-    rgb(255, 142.48, 61) 100%
-  );
+  background: rgb(224,59,40);
+  background: linear-gradient(130deg, rgba(224,59,40,1) 0%, rgba(255,142,61,1) 100%);
   border-radius: 30px;
   box-shadow: 0px 4px 4px #00000040;
   overflow: hidden;
