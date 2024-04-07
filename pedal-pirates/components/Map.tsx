@@ -11,6 +11,7 @@ import {
 } from 'react'
 import { ImageWithLoadingAnimation } from './ImageWithLoadingAnimation'
 import { Report } from '@/lib/parse-data'
+import { Marker } from './Marker'
 
 type Rectangle = {
   x: number
@@ -86,6 +87,36 @@ export function Map ({ corner1, corner2, zoom, reports }: MapProps) {
     return tiles
   }, [zoom, viewport])
 
+  const groups = useMemo(() => {
+    const THRESHOLD = 10
+    const groups: Record<string, { report: Report; position: Point }[]> = {}
+    for (const report of reports) {
+      const point = latLongToPoint(report.location)
+      const position = {
+        x: (point.x / tileSize - range.x) * TILE_SIZE,
+        y: (range.y + range.height - point.y / tileSize) * TILE_SIZE
+      }
+      const groupId = `${Math.floor(position.x / THRESHOLD)},${Math.floor(
+        position.y / THRESHOLD
+      )}`
+      groups[groupId] ??= []
+      groups[groupId].push({ report, position })
+    }
+    return Object.values(groups).map(entries => {
+      // Average the group's position
+      let x = 0
+      let y = 0
+      for (const entry of entries) {
+        x += entry.position.x
+        y += entry.position.y
+      }
+      return {
+        reports: entries.map(({ report }) => report),
+        position: { x: x / entries.length, y: y / entries.length }
+      }
+    })
+  }, [reports])
+
   return (
     <div
       className='map'
@@ -127,25 +158,13 @@ export function Map ({ corner1, corner2, zoom, reports }: MapProps) {
           />
         ))}
       </div>
-      {reports.map((report, i) => {
-        const point = latLongToPoint(report.location)
-        return (
-          <div
-            key={i}
-            className='marker'
-            style={{
-              left: `${(point.x / tileSize - range.x) * TILE_SIZE}px`,
-              top: `${
-                (range.y + range.height - point.y / tileSize) * TILE_SIZE
-              }px`,
-              whiteSpace: 'pre',
-              transform: `translate(-50%, -50%)`
-            }}
-          >
-            {report.object}
-          </div>
-        )
-      })}
+      {groups.map(({ reports, position }) => (
+        <Marker
+          key={`${position.x},${position.y}`}
+          reports={reports}
+          style={{ left: `${position.x}px`, top: `${position.y}px` }}
+        />
+      ))}
     </div>
   )
 }

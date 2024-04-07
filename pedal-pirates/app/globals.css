@@ -28,10 +28,7 @@ body {
   width: 256px;
   height: 256px;
 }
-.marker {
-  position: absolute;
-  background-color: black;
-}
+
 .loading,
 .loaded {
   transition: opacity 0.2s;
@@ -43,14 +40,36 @@ body {
   opacity: 1;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(14,72,90,1) 100%);
+.report {
+  position: absolute;
+  background-color: #f5a32f;
+  width: 50px;
+  height: 50px;
+  margin: -25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.report-1 {
+  background-color: #e03b28;
+  width: 30px;
+  height: 30px;
+  margin: -15px;
+}
+.report-2 {
+  background-color: #ff8e3d;
+  width: 40px;
+  height: 40px;
+  margin: -20px;
 }
 
 .frame {
-  background: linear-gradient(180deg, rgb(224.25, 58.65, 39.94) 0%, rgb(255, 142.48, 61) 100%);
+  background: linear-gradient(
+    180deg,
+    rgb(224.25, 58.65, 39.94) 0%,
+    rgb(255, 142.48, 61) 100%
+  );
   background-color: rgba(255, 255, 255, 1);
   border-radius: 0px 30px 30px 0px;
   height: 832px;
@@ -76,7 +95,7 @@ body {
 
 .frame .text-wrapper {
   color: #eeffff;
-  font-family: "Darker Grotesque-ExtraBold", Helvetica;
+  font-family: 'Darker Grotesque-ExtraBold', Helvetica;
   font-size: 80px;
   font-weight: 800;
   left: 36px;
@@ -89,7 +108,7 @@ body {
 
 .frame .div {
   color: #eeffff;
-  font-family: "DM Sans-Bold", Helvetica;
+  font-family: 'DM Sans-Bold', Helvetica;
   font-size: 30px;
   font-weight: 700;
   left: 0;
@@ -114,7 +133,7 @@ body {
 
 .frame .p {
   color: #093949;
-  font-family: "DM Sans-Medium", Helvetica;
+  font-family: 'DM Sans-Medium', Helvetica;
   font-size: 24px;
   font-weight: 500;
   left: 48px;
@@ -135,7 +154,7 @@ body {
 
 .frame .text-wrapper-2 {
   color: #0a3a49;
-  font-family: "DM Sans-Bold", Helvetica;
+  font-family: 'DM Sans-Bold', Helvetica;
   font-size: 20px;
   font-weight: 700;
   left: 210px;
@@ -147,7 +166,11 @@ body {
 }
 
 .card {
-  background: radial-gradient(50% 50% at 50% 50%, rgb(224.25, 58.65, 39.94) 0%, rgb(255, 142.48, 61) 100%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgb(224.25, 58.65, 39.94) 0%,
+    rgb(255, 142.48, 61) 100%
+  );
   border-radius: 30px;
   box-shadow: 0px 4px 4px #00000040;
   overflow: hidden;
@@ -156,7 +179,7 @@ body {
 
 .card .vehicle-default {
   color: #eefffe;
-  font-family: "DM Sans-Bold", Helvetica;
+  font-family: 'DM Sans-Bold', Helvetica;
   font-size: 25px;
   font-weight: 400;
   left: 117px;
@@ -172,7 +195,7 @@ body {
 }
 
 .card .span {
-  font-family: "DM Sans-Regular", Helvetica;
+  font-family: 'DM Sans-Regular', Helvetica;
 }
 
 .card .overlap-group {
@@ -193,7 +216,7 @@ body {
 
 .card .div {
   color: #ffffff;
-  font-family: "DM Sans-Regular", Helvetica;
+  font-family: 'DM Sans-Regular', Helvetica;
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
@@ -209,7 +232,7 @@ body {
 
 .card .was-your-ride-jacked {
   color: #eefffe;
-  font-family: "DM Sans-Regular", Helvetica;
+  font-family: 'DM Sans-Regular', Helvetica;
   font-size: 25px;
   font-weight: 400;
   left: 0;
@@ -223,14 +246,14 @@ body {
 
 .card .text-wrapper-2 {
   color: #eefffe;
-  font-family: "DM Sans-Regular", Helvetica;
+  font-family: 'DM Sans-Regular', Helvetica;
   font-size: 25px;
   font-weight: 400;
   letter-spacing: 0;
 }
 
 .card .text-wrapper-3 {
-  font-family: "DM Sans-Bold", Helvetica;
+  font-family: 'DM Sans-Bold', Helvetica;
   font-weight: 700;
 }
 
@@ -247,7 +270,7 @@ body {
 
 .card .text-wrapper-4 {
   color: #ffffff;
-  font-family: "DM Sans-Regular", Helvetica;
+  font-family: 'DM Sans-Regular', Helvetica;
   font-size: 50px;
   font-weight: 400;
   left: 26px;

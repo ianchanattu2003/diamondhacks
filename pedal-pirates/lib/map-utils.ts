@@ -1,3 +1,6 @@
+// https://github.com/SheepTester/uxdy/blob/main/classrooms/lib/locations.ts
+// https://github.com/SheepTester/offline-ucsd-map/blob/main/src/view/lat-long.ts
+
 export type Point = {
   x: number
   y: number
