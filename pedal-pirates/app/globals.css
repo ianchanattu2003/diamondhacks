@@ -30,6 +30,7 @@ body {
 }
 .marker {
   position: absolute;
+  background-color: black;
 }
 .loading,
 .loaded {

@@ -34,7 +34,7 @@ export function classroomsPixelToLatLong (x: number, y: number): Location {
   const zoom = 17
   const tileSize = 2 ** (MAX_ZOOM - zoom) * 256
   const tileX = (x / 256 + 22845) * tileSize
-  const tileY = (y / 256 + 78217) * tileSize
+  const tileY = ((2816 - y) / 256 + 78217) * tileSize
   return {
     longitude: (tileX / SCALE - 1) * 180,
     latitude:
