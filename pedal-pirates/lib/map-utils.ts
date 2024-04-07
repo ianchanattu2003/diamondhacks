@@ -23,3 +23,23 @@ export function latLongToPoint ({ latitude, longitude }: Location): Point {
         1)
   }
 }
+
+/**
+ * Converts a pixel location in the [classrooms map image][map] to a latitude
+ * and longitude position.
+ *
+ * [map]: https://sheeptester.github.io/uxdy/classrooms/map.webp
+ */
+export function classroomsPixelToLatLong (x: number, y: number): Location {
+  const zoom = 17
+  const tileSize = 2 ** (MAX_ZOOM - zoom) * 256
+  const tileX = (x / 256 + 22845) * tileSize
+  const tileY = (y / 256 + 78217) * tileSize
+  return {
+    longitude: (tileX / SCALE - 1) * 180,
+    latitude:
+      ((Math.atan(Math.exp((tileY / SCALE - 1) * Math.PI)) - Math.PI / 4) *
+        360) /
+      Math.PI
+  }
+}

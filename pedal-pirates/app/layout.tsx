@@ -18,9 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <style>
+    {/* <style>
         font-family: ${font.style.fontFamily}, sans-serif;
-    </style>
+    </style> */}
 
       <body>
         {children}
