@@ -7,7 +7,8 @@ const SOURCE_URL =
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vSCyZWLvkB-ONwBelLDX800pnvUz7xXX6rd25LhdH8-NzQ9mtoXwoNZLpnQ7Coo7wUnMZ4bLcJqNjIp/pub?gid=213238627&single=true&output=tsv'
 
 export default async function Home () {
-  const reports = await fetch(SOURCE_URL)
+  // Last part is to bypass the cache
+  const reports = await fetch(SOURCE_URL + '&_=' + Math.random())
     .then(r => r.text())
     .then(parseData)
   return (

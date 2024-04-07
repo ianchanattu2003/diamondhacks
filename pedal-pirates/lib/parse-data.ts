@@ -25,11 +25,13 @@ export function parseData (tsv: string): Report[] {
     if (type === 'IGNORE') {
       continue
     }
-    console.log(x, y, classroomsPixelToLatLong(+x, +y))
     reports.push({
-      source: type,
+      source: type === 'UCPD Logs' ? 'UCPD' : 'Crowdsourcing',
       object,
-      location: classroomsPixelToLatLong(+x, +y),
+      location:
+        type === 'UCPD Logs'
+          ? classroomsPixelToLatLong(+x, +y)
+          : { latitude: +x, longitude: +y },
       locationName,
       lastSeen: { date, time },
       details
