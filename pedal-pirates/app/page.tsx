@@ -31,12 +31,12 @@ export default async function Home () {
       <div className='text-wrapper-2'>Designed for DiamondHacks 2024</div>
       <Map
         corner1={{
-          latitude: 32.888901451546175,
-          longitude: -117.24270726605512
+          latitude: 32.8931662773903,
+          longitude: -117.25442971188062
         }}
         corner2={{
-          latitude: 32.87566564968557,
-          longitude: -117.22207895251772
+          latitude: 32.86301957588197,
+          longitude: -117.21767412641204
         }}
         zoom={17}
       >

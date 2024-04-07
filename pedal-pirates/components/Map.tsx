@@ -120,7 +120,7 @@ export function Map ({ corner1, corner2, zoom, children }: MapProps) {
             key={`${x}/${y}`}
             className='tile'
             src={`${LABEL_HOST}/${zoom}/${x + range.x}/${
-              range.height - y + range.y
+              range.height - 1 - y + range.y
             }`}
             style={{ left: `${x * TILE_SIZE}px`, top: `${y * TILE_SIZE}px` }}
           />
