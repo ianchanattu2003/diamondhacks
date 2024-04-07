@@ -12,12 +12,18 @@ import {
 import { ImageWithLoadingAnimation } from './ImageWithLoadingAnimation'
 import { Report } from '@/lib/parse-data'
 import { Marker } from './Marker'
+import { Card } from './Card'
 
 type Rectangle = {
   x: number
   y: number
   width: number
   height: number
+}
+
+type CardState = {
+  position: Point
+  reports: Report[]
 }
 
 const HOST = 'https://assets.concept3d.com/assets/1005/1005_Map_11'
@@ -117,17 +123,23 @@ export function Map ({ corner1, corner2, zoom, reports }: MapProps) {
     })
   }, [reports])
 
+  const [card, setCard] = useState<CardState | null>(null)
+
   return (
     <div
       className='map'
       onClick={e => {
-        const hasReports =
-          e.target instanceof Element && e.target.closest('[data-reports]')
-        const reports: Report[] =
-          hasReports instanceof HTMLElement && hasReports.dataset.reports
-            ? JSON.parse(hasReports.dataset.reports)
-            : []
-        console.log(reports)
+        setCard(
+          card
+            ? null
+            : {
+                position: {
+                  x: e.clientX + e.currentTarget.scrollLeft,
+                  y: e.clientY + e.currentTarget.scrollTop
+                },
+                reports: []
+              }
+        )
       }}
       onScroll={e => {
         const div = e.currentTarget
@@ -172,8 +184,19 @@ export function Map ({ corner1, corner2, zoom, reports }: MapProps) {
           key={`${position.x},${position.y}`}
           reports={reports}
           style={{ left: `${position.x}px`, top: `${position.y}px` }}
+          onClick={() => {
+            setCard({ reports, position })
+          }}
         />
       ))}
+      {card && (
+        <div
+          className='card-anchor'
+          style={{ left: `${card.position.x}px`, top: `${card.position.y}px` }}
+        >
+          <Card property1='variant-2' className={''} />
+        </div>
+      )}
     </div>
   )
 }

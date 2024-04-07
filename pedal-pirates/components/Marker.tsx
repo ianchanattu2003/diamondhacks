@@ -15,22 +15,26 @@ function displayObject (object: string): string | null {
 export type MarkerProps = {
   reports: Report[]
   style?: CSSProperties
+  onClick?: () => void
 }
-export function Marker ({ reports, style }: MarkerProps) {
+export function Marker ({ reports, style, onClick }: MarkerProps) {
   const hasEmoji =
     reports.length === 1 && displayObject(reports[0].object) !== null
 
   return (
-    <div
+    <button
       className={`report report-${reports.length} ${
         hasEmoji ? 'has-emoji' : ''
       }`}
       style={style}
-      data-reports={JSON.stringify(reports)}
+      onClick={e => {
+        onClick?.()
+        e.stopPropagation()
+      }}
     >
       {reports.length === 1
         ? displayObject(reports[0].object) ?? '1'
         : reports.length}
-    </div>
+    </button>
   )
 }
