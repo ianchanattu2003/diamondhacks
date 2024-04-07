@@ -15,23 +15,52 @@ with open("output.txt", 'r',errors='ignore') as file:
     for line in file:
         if(count == 0):
             situation.append(line)
-            count= 1
+            count = 1
         elif(count == 1):
             location.append(line)
             count = 2
         elif(count == 2):
             if(line.find("Date Reported") != -1):
-                reportDate.append(line)
+                cut = line.split(' ', 2)
+                if len(cut) < 3:
+                    reportDate.append("")
+                else:
+                    reportDate.append(cut[2])
+
             elif(line.find("Incident/Case#") != -1):
-                caseNum.append(line)
+                cut = line.split(' ', 1)
+                if len(cut) < 2:
+                    caseNum.append("")
+                else:
+                    caseNum.append(cut[1])
+
             elif(line.find("Date Occurred") != -1):
-                occurDate.append(line)
+                cut = line.split(' ', 2)
+                if len(cut) < 3:
+                    occurDate.append("")
+                else:
+                    occurDate.append(cut[2])
+
             elif(line.find("Time Occurred") != -1):
-                occurTime.append(line)
+                cut = line.split(' ', 2)
+                if len(cut) < 3:
+                    occurTime.append("")
+                else:
+                    occurTime.append(cut[2])
+
             elif(line.find("Summary") != -1):
-                summary.append(line)
+                cut = line.split(' ', 1)
+                if len(cut) < 2:
+                    summary.append("")
+                else:
+                    summary.append(cut[1])
+
             elif(line.find("Disposition") != -1):
-                disposition.append(line)
+                cut = line.split(' ', 1)
+                if len(cut) < 2:
+                    disposition.append("")
+                else:
+                    disposition.append(cut[1])
                 count = 0
         
 
