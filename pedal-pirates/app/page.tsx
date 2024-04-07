@@ -39,13 +39,8 @@ export default async function Home () {
           longitude: -117.21767412641204
         }}
         zoom={17}
-      >
-        {reports.map((report, i) => ({
-          key: i,
-          location: report.location,
-          element: report.object
-        }))}
-      </Map>
+        reports={reports}
+      />
     </main>
   )
 }

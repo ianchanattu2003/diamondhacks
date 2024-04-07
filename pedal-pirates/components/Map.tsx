@@ -10,6 +10,7 @@ import {
   useState
 } from 'react'
 import { ImageWithLoadingAnimation } from './ImageWithLoadingAnimation'
+import { Report } from '@/lib/parse-data'
 
 type Rectangle = {
   x: number
@@ -29,9 +30,9 @@ export type MapProps = {
   corner1: Location
   corner2: Location
   zoom: number
-  children: { location: Location; key: string | number; element: ReactNode }[]
+  reports: Report[]
 }
-export function Map ({ corner1, corner2, zoom, children }: MapProps) {
+export function Map ({ corner1, corner2, zoom, reports }: MapProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [viewport, setViewport] = useState<Rectangle>({
     x: 0,
@@ -126,11 +127,11 @@ export function Map ({ corner1, corner2, zoom, children }: MapProps) {
           />
         ))}
       </div>
-      {children.map(({ key, location, element }) => {
-        const point = latLongToPoint(location)
+      {reports.map((report, i) => {
+        const point = latLongToPoint(report.location)
         return (
           <div
-            key={key}
+            key={i}
             className='marker'
             style={{
               left: `${(point.x / tileSize - range.x) * TILE_SIZE}px`,
@@ -141,7 +142,7 @@ export function Map ({ corner1, corner2, zoom, children }: MapProps) {
               transform: `translate(-50%, -50%)`
             }}
           >
-            {element}
+            {report.object}
           </div>
         )
       })}
