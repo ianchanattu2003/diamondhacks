@@ -109,7 +109,9 @@ export function Map ({ corner1, corner2, zoom, children }: MapProps) {
           <ImageWithLoadingAnimation
             key={`${x}/${y}`}
             className='tile'
-            src={`${HOST}/${zoom}/${x + range.x}/${range.height - y + range.y}`}
+            src={`${HOST}/${zoom}/${x + range.x}/${
+              range.height - 1 - y + range.y
+            }`}
             style={{ left: `${x * TILE_SIZE}px`, top: `${y * TILE_SIZE}px` }}
           />
         ))}
@@ -135,6 +137,7 @@ export function Map ({ corner1, corner2, zoom, children }: MapProps) {
               top: `${
                 (range.y + range.height - point.y / tileSize) * TILE_SIZE
               }px`,
+              whiteSpace: 'pre',
               transform: `translate(-50%, -50%)`
             }}
           >

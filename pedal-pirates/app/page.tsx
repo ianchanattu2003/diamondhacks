@@ -9,8 +9,8 @@ export default function Home () {
           longitude: -117.24270726605512
         }}
         corner2={{
-          latitude: 32.87017208243561,
-          longitude: -117.21780945830383
+          latitude: 32.87566564968557,
+          longitude: -117.22207895251772
         }}
         zoom={17}
       >
@@ -24,12 +24,20 @@ export default function Home () {
             element: '💖GEISEL💖'
           },
           {
-            key: 'hey',
+            key: 'hey3',
             location: {
               latitude: 32.888901451546175,
               longitude: -117.24270726605512
             },
             element: '!!!!📸!!!!'
+          },
+          {
+            key: 'hey4',
+            location: {
+              latitude: 32.87566564968557,
+              longitude: -117.22207895251772
+            },
+            element: '!!!!🙏!!!!'
           },
           {
             key: 'hey2',
