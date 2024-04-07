@@ -1,7 +1,14 @@
 'use client'
 
 import { Location, MAX_ZOOM, Point, latLongToPoint } from '@/lib/map-utils'
-import { PropsWithChildren, useEffect, useMemo, useRef, useState } from 'react'
+import {
+  PropsWithChildren,
+  ReactNode,
+  useEffect,
+  useMemo,
+  useRef,
+  useState
+} from 'react'
 import { ImageWithLoadingAnimation } from './ImageWithLoadingAnimation'
 
 type Rectangle = {
@@ -12,6 +19,8 @@ type Rectangle = {
 }
 
 const HOST = 'https://assets.concept3d.com/assets/1005/1005_Map_11'
+const LABEL_HOST =
+  'https://assets.concept3d.com/assets/1005/1005_BuildingLabels_Mar2024'
 
 /** Visual size of each tile, in pixels. */
 const TILE_SIZE = 256
@@ -20,13 +29,9 @@ export type MapProps = {
   corner1: Location
   corner2: Location
   zoom: number
+  children: { location: Location; key: string | number; element: ReactNode }[]
 }
-export function Map ({
-  corner1,
-  corner2,
-  zoom,
-  children
-}: PropsWithChildren<MapProps>) {
+export function Map ({ corner1, corner2, zoom, children }: MapProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [viewport, setViewport] = useState<Rectangle>({
     x: 0,
@@ -51,9 +56,9 @@ export function Map ({
     }
   }, [])
 
+  /** Size of each tile at the largest zoom level. */
+  const tileSize = 2 ** (MAX_ZOOM - zoom) * TILE_SIZE
   const range = useMemo(() => {
-    /** Size of each tile at the largest zoom level. */
-    const tileSize = 2 ** (MAX_ZOOM - zoom) * TILE_SIZE
     const p1 = latLongToPoint(corner1)
     const p2 = latLongToPoint(corner2)
     const x = Math.floor(Math.min(p1.x, p2.x) / tileSize)
@@ -108,8 +113,35 @@ export function Map ({
             style={{ left: `${x * TILE_SIZE}px`, top: `${y * TILE_SIZE}px` }}
           />
         ))}
+        {tiles.map(({ x, y }) => (
+          <ImageWithLoadingAnimation
+            key={`${x}/${y}`}
+            className='tile'
+            src={`${LABEL_HOST}/${zoom}/${x + range.x}/${
+              range.height - y + range.y
+            }`}
+            style={{ left: `${x * TILE_SIZE}px`, top: `${y * TILE_SIZE}px` }}
+          />
+        ))}
       </div>
-      {children}
+      {children.map(({ key, location, element }) => {
+        const point = latLongToPoint(location)
+        return (
+          <div
+            key={key}
+            className='marker'
+            style={{
+              left: `${(point.x / tileSize - range.x) * TILE_SIZE}px`,
+              top: `${
+                (range.y + range.height - point.y / tileSize) * TILE_SIZE
+              }px`,
+              transform: `translate(-50%, -50%)`
+            }}
+          >
+            {element}
+          </div>
+        )
+      })}
     </div>
   )
 }
