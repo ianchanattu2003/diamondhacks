@@ -2,6 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: dark;
+}
+html,
+body,
+main {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+.map {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.scroll-area {
+  position: relative;
+  overflow: hidden;
+}
+.tile {
+  position: absolute;
+  width: 256px;
+  height: 256px;
+}
+.loading,
+.loaded {
+  transition: opacity 0.2s;
+}
+.loading {
+  opacity: 0;
+}
+.loaded {
+  opacity: 1;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(2,0,36);
