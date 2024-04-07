@@ -75,7 +75,7 @@ interface Props {
     className: any;
 }
 
-export const Card = ({ property1, className }: Props): JSX.Element => {
+const Card = ({ property1, className }: Props): JSX.Element => {
     return (
         <div className={`card ${property1} ${className}`}>
             {["default", "variant-2"].includes(property1) && (
