@@ -145,3 +145,176 @@ body {
   width: 331px;
 }
 
+.card {
+  background: radial-gradient(50% 50% at 50% 50%, rgb(224.25, 58.65, 39.94) 0%, rgb(255, 142.48, 61) 100%);
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px #00000040;
+  overflow: hidden;
+  width: 550px;
+}
+
+.card .vehicle-default {
+  color: #eefffe;
+  font-family: "DM Sans-Bold", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  left: 117px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 18px;
+  width: 432px;
+}
+
+.card .text-wrapper {
+  font-weight: 700;
+}
+
+.card .span {
+  font-family: "DM Sans-Regular", Helvetica;
+}
+
+.card .overlap-group {
+  left: 11px;
+  position: absolute;
+  width: 80px;
+}
+
+.card .ellipse {
+  background-color: #eefffe;
+  border-radius: 40px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 80px;
+  left: 0;
+  position: absolute;
+  width: 80px;
+}
+
+.card .div {
+  color: #ffffff;
+  font-family: "DM Sans-Regular", Helvetica;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+}
+
+.card .overlap-group-2 {
+  height: 225px;
+  position: relative;
+  top: 10px;
+  width: 551px;
+}
+
+.card .was-your-ride-jacked {
+  color: #eefffe;
+  font-family: "DM Sans-Regular", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  width: 551px;
+}
+
+.card .text-wrapper-2 {
+  color: #eefffe;
+  font-family: "DM Sans-Regular", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.card .text-wrapper-3 {
+  font-family: "DM Sans-Bold", Helvetica;
+  font-weight: 700;
+}
+
+.card .ellipse-2 {
+  background-color: #eefffe;
+  border-radius: 40px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 80px;
+  left: 11px;
+  position: absolute;
+  top: 0;
+  width: 80px;
+}
+
+.card .text-wrapper-4 {
+  color: #ffffff;
+  font-family: "DM Sans-Regular", Helvetica;
+  font-size: 50px;
+  font-weight: 400;
+  left: 26px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 14px;
+  width: 50px;
+}
+
+.card.default {
+  height: 250px;
+  position: relative;
+}
+
+.card.variant-3 {
+  height: 100px;
+}
+
+.card.variant-2 {
+  height: 250px;
+  position: relative;
+}
+
+.card.default .overlap-group {
+  height: 94px;
+  top: 76px;
+}
+
+.card.variant-3 .overlap-group {
+  height: 94px;
+  top: 76px;
+}
+
+.card.variant-2 .overlap-group {
+  height: 97px;
+  top: 88px;
+}
+
+.card.default .ellipse {
+  top: 12px;
+}
+
+.card.variant-3 .ellipse {
+  top: 12px;
+}
+
+.card.variant-2 .ellipse {
+  top: 0;
+}
+
+.card.default .div {
+  font-size: 75px;
+  left: 3px;
+  top: 0;
+  width: 65px;
+}
+
+.card.variant-3 .div {
+  font-size: 75px;
+  left: 3px;
+  top: 0;
+  width: 65px;
+}
+
+.card.variant-2 .div {
+  font-size: 65px;
+  left: 10px;
+  top: 3px;
+  width: 61px;
+}
