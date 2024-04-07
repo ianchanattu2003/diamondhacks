@@ -8,7 +8,7 @@ export default function Home () {
     <main>
       <div className="frame">
             <div className="overlap-group">
-                <img className="vector" alt="Vector" src="./wheel.svg" />
+                <img className="vector" alt="Vector" src="vector.svg" />
                 <div className="text-wrapper">Pedal Pirates</div>
                 <div className="div">Protect your wheels from</div>
                 <div className="rectangle" />
